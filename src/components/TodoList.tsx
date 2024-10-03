@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FC } from "react";
 import { useAppSelector } from "../hooks/hook";
 import TodoItem from "./TodoItem";
@@ -8,7 +9,14 @@ const TodoList: FC = () => {
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} {...todo} />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          key={todo.id}
+        >
+          <TodoItem {...todo} />
+        </motion.div>
       ))}
     </ul>
   );
