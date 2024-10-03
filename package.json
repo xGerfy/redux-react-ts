@@ -1,6 +1,7 @@
 {
   "name": "redux-react-ts",
   "version": "0.1.0",
+  "homepage": "https://xGerfy.github.io/redux-react-ts",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
