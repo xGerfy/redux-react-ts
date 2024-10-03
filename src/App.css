@@ -1,3 +1,63 @@
 .App {
   text-align: center;
+  background: rgb(201, 201, 201);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.form__input,
+.form__btn,
+.title {
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px 0px rgb(150, 150, 150);
+  background: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 410px;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px 0px rgb(150, 150, 150);
+}
+
+.checkbox {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input:checked + span {
+  text-decoration: line-through;
+}
+
+span:last-child {
+  color: red;
+  cursor: pointer;
+  padding: 0 9px 5px 9px;
 }

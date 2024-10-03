@@ -28,7 +28,7 @@ const todoSlice = createSlice({
     removeTodo(state, action: PayloadAction<string>) {
       state.list = state.list.filter((todo) => todo.id !== action.payload);
     },
-    toggleTodoComplete(state, action: PayloadAction<string>) {
+    toggleComplete(state, action: PayloadAction<string>) {
       const toggledTodo = state.list.find((todo) => todo.id === action.payload);
       if (toggledTodo) {
         toggledTodo.completed = !toggledTodo.completed;
@@ -37,6 +37,6 @@ const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo, toggleTodoComplete } = todoSlice.actions;
+export const { addTodo, removeTodo, toggleComplete } = todoSlice.actions;
 
 export default todoSlice.reducer;
